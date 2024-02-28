@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala for a Reason</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Thala For A Reason</h1>
+        
+        <label for="userInput">What's Your Reason:</label>
+        <input type="text" id="userInput" />
+        <button onclick="checkConnection()">Check for Thala</button>
+        <p id="output"></p>
+
+        <!-- Local videos elements -->
+        <script>
+            document.getElementById("userInput").addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.querySelector("button").click();
+                }
+            });
+        </script>
+        <video id="localVideoSeven" width="560" height="315" controls style="display: none;">
+            <source src="reason.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video id="localVideoOther" width="560" height="315" controls style="display: none;">
+            <source src="entry.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span style="color: white;" >Made with ❤️ by <a style="color: red;" href="https://www.linkedin.com/in/manish-kumar-gupta-wbxcs/">Manish Gupta</a></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
